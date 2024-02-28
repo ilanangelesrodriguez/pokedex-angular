@@ -77,6 +77,46 @@
   flex-wrap: wrap;
   gap: 2em;
   list-style: none;
+  padding: 0;
 }
 
 
+
+
+.busqueda {
+  max-width: 17em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.busqueda__input {
+  width: 170px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: rgb(255, 81, 0);
+}
+
+.busqueda__button {
+  cursor: pointer;
+  padding: 0 12px;
+  border: none;
+  background-color: transparent;
+}
+
+.searchIcon {
+  width: 13px;
+}
+
+.searchIcon path {
+  fill: rgb(114, 114, 114);
+}
