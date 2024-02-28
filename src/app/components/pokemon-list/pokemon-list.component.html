@@ -1,0 +1,6 @@
+<!-- src/app/components/pokemon-list/pokemon-list.component.html -->
+<ul>
+  <li *ngFor="let name of pokemonNames">
+    <a [routerLink]="['/pokemon-detail', name]">{{ name }}</a>
+  </li>
+</ul>

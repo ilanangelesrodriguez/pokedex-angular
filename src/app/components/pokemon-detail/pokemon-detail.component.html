@@ -1,0 +1,6 @@
+<div *ngIf="pokemon">
+  <h2>{{ pokemon.name }}</h2>
+  <img *ngIf="pokemon && pokemon.sprites && pokemon.sprites.front_shiny" src="{{pokemon.sprites.front_shiny}}" alt="{{ pokemon.name }}" width="200" height="200">
+  <p>Height: {{ pokemon.height }}</p>
+  <p>Weight: {{ pokemon.weight }}</p>
+</div>
