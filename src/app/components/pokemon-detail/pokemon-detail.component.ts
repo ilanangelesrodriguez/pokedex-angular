@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Pokemon} from "../../models/pokemon";
 import {PokeapiService} from "../../services/pokeapi.service";
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 import {NgIf, NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -9,7 +9,8 @@ import {NgIf, NgOptimizedImage} from "@angular/common";
   standalone: true,
   imports: [
     NgOptimizedImage,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './pokemon-detail.component.html',
   styleUrl: './pokemon-detail.component.css'
