@@ -1,9 +1,11 @@
-<div *ngIf="pokemon">
-  <h2>{{ pokemon.name }}</h2>
-  <img *ngIf="pokemon && pokemon.sprites && pokemon.sprites.front_shiny" src="{{pokemon.sprites.other.dream_world.front_default}}" alt="{{ pokemon.name }}" width="200" height="200">
-
-  <p>Height: {{ pokemon.height }}</p>
-  <p>Weight: {{ pokemon.weight }}</p>
-
+<div class="card" *ngIf="pokemon">
+  <div class="content">
+    <img *ngIf="pokemon && pokemon.sprites && pokemon.sprites.front_shiny" src="{{pokemon.sprites.other.dream_world.front_default}}" alt="{{ pokemon.name }}" width="200" height="200">
+    <div class="title">{{ pokemon.name }}</div>
+    <div class="description">
+      <p><b>Height:</b> {{ pokemon.height }}</p>
+      <p><b>Weight:</b> {{ pokemon.weight }}</p>
+    </div>
+  </div>
   <button routerLink="/pokemon-list">Volver</button>
 </div>
