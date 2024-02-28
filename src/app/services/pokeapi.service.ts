@@ -17,7 +17,15 @@ export class PokeapiService {
       map((data: any) => {
         return new Pokemon(
           data.name,
-          { front_shiny: data.sprites.front_shiny },
+          {
+            front_shiny: data.sprites.front_shiny,
+            other: {
+              dream_world: {
+                front_default: data.sprites.other.dream_world.front_default
+              }
+            }
+          },
+          data.types,
           data.height,
           data.weight);
       }),

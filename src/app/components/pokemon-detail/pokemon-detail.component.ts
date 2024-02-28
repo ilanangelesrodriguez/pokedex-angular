@@ -27,7 +27,13 @@ export class PokemonDetailComponent implements OnInit {
           data.name,
           {
             front_shiny: data.sprites.front_shiny,
+            other: {
+              dream_world: {
+                front_default: data.sprites.other?.dream_world.front_default
+              }
+            }
           },
+          data.types,
           data.height,
           data.weight
         );
@@ -41,7 +47,13 @@ export class PokemonDetailComponent implements OnInit {
         data.name,
         {
           front_shiny: data.sprites.front_shiny,
+          other: {
+            dream_world: {
+              front_default: data.sprites.other.dream_world.front_default
+            }
+          }
         },
+        data.types,
         data.height,
         data.weight
       );

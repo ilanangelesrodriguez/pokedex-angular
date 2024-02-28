@@ -1,6 +1,24 @@
-<!-- src/app/components/pokemon-list/pokemon-list.component.html -->
-<ul>
+<ul class="ul">
   <li *ngFor="let name of pokemonNames">
-    <a [routerLink]="['/pokemon-detail', name]">{{ name }}</a>
+    <div class="card">
+      <div class="card-border-top">
+      </div>
+      <div class="img">
+        <img *ngIf="name.front_shiny" src="{{name.front_shiny}}" alt="{{ name.name }}">
+      </div>
+      <span>{{ name.name  }}</span>
+      <div  class="card__types">
+        <div *ngFor="let type of name.types" class="card__type">
+          {{ type }}
+        </div>
+      </div>
+
+      <button [routerLink]="['/pokemon-detail', name.name ]">
+        Ver más
+      </button>
+    </div>
+
   </li>
 </ul>
+
+

@@ -17,7 +17,7 @@ import {RouterModule, RouterOutlet} from '@angular/router';
   ]
 })
 export class AppComponent {
-  title = 'pokedex-angular';
+  title = 'Pokémon';
 
   constructor(private pokeapiService: PokeapiService) { }
 
